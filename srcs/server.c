@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   server.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tglory <tglory@student.42lyon.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/17 17:20:20 by tglory            #+#    #+#             */
+/*   Updated: 2021/11/17 17:21:39 by tglory           ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/minitalk.h"
 
 static void	reset_vars(unsigned char *byte, int *counter)
@@ -58,7 +70,7 @@ int	main(void)
 	pid_t	a;
 
 	a = getpid();
-	printf("PID : %d\n\n", a);
+	printf("PID : %d\n", a);
 	if (register_handler(SIGUSR1) == -1)
 	{
 		printf("Error when register SIGUSER1 listener.\n");
