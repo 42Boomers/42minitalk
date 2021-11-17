@@ -35,7 +35,6 @@ int	main(int ac, char **av)
 	str = av[2];
 	while (*str)
 	{
-		printf("%c\n", *str);
 		if (send_byte(pid, *str, 7) == -1)
 		{
 			printf("An error has occurred when sending the '%c'.\n", *str);
@@ -48,5 +47,6 @@ int	main(int ac, char **av)
 		printf("An error has occurred when sending the end signal.");
 		return (1);
 	}
+	printf("Send to the server successfully\n");
 	return (0);
 }
