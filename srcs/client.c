@@ -6,7 +6,7 @@
 /*   By: tglory <tglory@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:20:13 by tglory            #+#    #+#             */
-/*   Updated: 2021/11/17 17:20:14 by tglory           ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 17:46:08 by tglory           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,23 @@ static int	send_byte(int pid, unsigned char byte, int position)
 		return (kill(pid, SIGUSR1));
 }
 
-static void	check_arg(int ac)
+static int	check_arg(int ac, char **av)
 {
+	int	*pid;
+	
 	if (ac < 3)
 	{
 		printf("The 1st must be the PID of the server. " \
 			"The 2nd argument must be a string.\n");
 		exit(1);
 	}
+	pid = ft_atoi_utimate(av[1]);
+	if (!pid || *pid <= 0)
+	{
+		printf("The 1st must be the PID of the server.\n");
+		exit(1);
+	}
+	return (*pid);
 }
 
 int	main(int ac, char **av)
@@ -42,8 +51,7 @@ int	main(int ac, char **av)
 	int		pid;
 	char	*str;
 
-	check_arg(ac);
-	pid = atoi(av[1]);
+	pid = check_arg(ac, av);
 	str = av[2];
 	while (*str)
 	{

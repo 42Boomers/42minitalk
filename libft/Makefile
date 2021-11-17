@@ -6,7 +6,7 @@
 #    By: tglory <tglory@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/26 17:55:35 by tglory            #+#    #+#              #
-#    Updated: 2021/11/07 00:11:04 by tglory           ###   ########lyon.fr    #
+#    Updated: 2021/11/17 17:43:11 by tglory           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,8 @@ SRC = ft_isdigit.c \
 		ft_putstr.c \
 		gnl/get_next_line.c \
 		gnl/get_next_line_utils.c \
-		custom/ft_isblank.c 
+		custom/ft_isblank.c \
+		custom/ft_atoi_utimate.c 
 
 O_FILES =	${SRC:.c=.o}
 

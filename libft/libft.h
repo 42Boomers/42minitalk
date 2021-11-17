@@ -34,7 +34,6 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_lstsize(t_list *lst);
 int					ft_strichr(const char *s, int c);
-
 void				ft_bzero(void *s, size_t len);
 void				ft_putchar(char c);
 void				ft_putstr(char *s);
@@ -78,6 +77,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f) (void *), void (del)
 						(void *));
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_lstdelone(t_list *lst, void (*del) (void *));
+
 int					ft_isblank(char *str);
+int					*ft_atoi_utimate(const char *str);
 
 #endif
