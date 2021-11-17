@@ -6,7 +6,7 @@
 /*   By: tglory <tglory@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:20:13 by tglory            #+#    #+#             */
-/*   Updated: 2021/11/17 17:49:48 by tglory           ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 19:17:40 by tglory           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	check_arg(int ac, char **av)
 			"The 2nd argument must be a string.\n");
 		exit(1);
 	}
-	pid = ft_atoi_utimate(av[1]);
+	pid = ft_atoi_ultimate(av[1]);
 	if (!pid || *pid <= 0)
 	{
 		printf("The 1st must be the PID of the server.\n");
@@ -64,7 +64,7 @@ int	main(int ac, char **av)
 	}
 	if (send_byte(pid, 0, 7) == -1)
 	{
-		printf("An error has occurred when sending the end signal.");
+		printf("An error has occurred when sending the end signal.\n");
 		return (1);
 	}
 	printf("Send to the server successfully\n");

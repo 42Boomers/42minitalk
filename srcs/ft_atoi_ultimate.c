@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_utimate.c                                  :+:      :+:    :+:   */
+/*   ft_atoi_ultimate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tglory <tglory@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 08:07:40 by tglory            #+#    #+#             */
-/*   Updated: 2021/04/20 08:07:40 by tglory           ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 19:16:49 by tglory           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../includes/minitalk.h"
 
-static int	*ft_atoi_utimate2(const char *str, unsigned int nb,
+static int	*ft_atoi_ultimate2(const char *str, unsigned int nb,
 	int neg, int *ret)
 {
 	int		swap;
@@ -43,7 +43,7 @@ static int	*ft_atoi_utimate2(const char *str, unsigned int nb,
  * @return int* or NULL
  * @param str should be in int range
  */
-int	*ft_atoi_utimate(const char *str)
+int	*ft_atoi_ultimate(const char *str)
 {
 	unsigned int	nb;
 	int				neg;
@@ -62,5 +62,5 @@ int	*ft_atoi_utimate(const char *str)
 	}
 	else if (*str == '+')
 		str++;
-	return (ft_atoi_utimate2(str, nb, neg, ret));
+	return (ft_atoi_ultimate2(str, nb, neg, ret));
 }

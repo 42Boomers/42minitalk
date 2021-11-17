@@ -1,33 +1,28 @@
 CC 			= 	gcc
 NAME_SERVER	=	server
 NAME_CLIENT	=	client
-LIB_PATH	=	libft/libft.a
 INCLUDES	=	includes/minitalk.h
-SRCS_CLIENT	=	srcs/client.c
+SRCS_CLIENT	=	srcs/client.c srcs/ft_atoi_ultimate.c
 SRCS_SERVER	=	srcs/server.c
 
 OBJS_CLIENT =	$(SRCS_CLIENT:.c=.o)
 OBJS_SERVER	=	$(SRCS_SERVER:.c=.o)
 
-#CFLAGS		=	-Wall -Wextra -g3 -fsanitize=address
 CFLAGS		=	-Wall -Wextra -Werror
 
 all : $(NAME_SERVER) $(NAME_CLIENT)
 
 ######################################### SERVER #########################################
 $(NAME_SERVER): $(OBJS_SERVER) $(INCLUDES)
-	make -C libft
-	$(CC) ${CFLAGS} $(OBJS_SERVER) $(LIB_PATH) -o $(NAME_SERVER)
+	$(CC) ${CFLAGS} $(OBJS_SERVER) -o $(NAME_SERVER)
 
 ######################################### CLIENT #########################################
 $(NAME_CLIENT): $(OBJS_CLIENT) $(INCLUDES)
-	make -C libft
-	$(CC) ${CFLAGS} $(OBJS_CLIENT) $(LIB_PATH) -o $(NAME_CLIENT)
+	$(CC) ${CFLAGS} $(OBJS_CLIENT) -o $(NAME_CLIENT)
 
 ##########################################################################################
 
 clean:
-	make $@ -C libft
 	rm -f $(OBJS_SERVER) $(OBJS_CLIENT)
 
 .c.o:
