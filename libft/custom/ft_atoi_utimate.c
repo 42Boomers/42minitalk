@@ -12,7 +12,8 @@
 
 #include "../libft.h"
 
-static int	*ft_atoi_utimate2(const char *str, unsigned int nb, int neg, int *ret)
+static int	*ft_atoi_utimate2(const char *str, unsigned int nb,
+	int neg, int *ret)
 {
 	int		swap;
 	int		i;

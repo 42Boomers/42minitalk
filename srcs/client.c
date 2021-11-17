@@ -6,7 +6,7 @@
 /*   By: tglory <tglory@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 17:20:13 by tglory            #+#    #+#             */
-/*   Updated: 2021/11/17 17:46:08 by tglory           ###   ########lyon.fr   */
+/*   Updated: 2021/11/17 17:49:48 by tglory           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	send_byte(int pid, unsigned char byte, int position)
 static int	check_arg(int ac, char **av)
 {
 	int	*pid;
-	
+
 	if (ac < 3)
 	{
 		printf("The 1st must be the PID of the server. " \
