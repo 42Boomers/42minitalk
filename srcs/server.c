@@ -37,7 +37,6 @@ static void	ft_write(int bit, pid_t pid_client)
 
 static void	handle_signal(int signum, siginfo_t *sig_info, void *ucontext_t)
 {
-	(void)sig_info;
 	(void)ucontext_t;
 	if (signum == SIGUSR1)
 		ft_write(0, sig_info->si_pid);
